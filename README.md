@@ -6,9 +6,8 @@ This project is a Laravel application designed to provide a robust framework for
 
 ## Features
 
-- Integration with Laravel Breeze.
-- Composer and npm.
-- Tailwind CSS for styling.
+- Integration with Laravel 12 + Breeze.
+- Custom command to auto build module.
 
 ## Requirements
 
@@ -44,7 +43,35 @@ This project is a Laravel application designed to provide a robust framework for
    ```bash
    composer run dev
    ```
-   
+## Command for build module
+For build module, i have build custom command so you don't need to create it manualy. Just try this command :
+
+1. Create module
+```bash
+php artisan module:make {module_name} {--crud}
+```
+you can user option ``--crud`` to make crud module
+
+2. Make migration file inside the module
+```bash
+php artisan module:make-migration {module_name} {migration_name}
+```
+
+3. Make seeder file inside the module
+```bash
+php artisan module:make-seeder {module_name} {seeder_name}
+```
+
+4. Run seeder file inside module
+```bash
+php artisan module:db-seed
+```
+
+5. Delete module
+```bash
+php artisan module:delete {module_name}
+```
+
 ## License
 
 This project is licensed under the MIT License.
