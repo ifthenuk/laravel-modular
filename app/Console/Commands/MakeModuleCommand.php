@@ -53,7 +53,7 @@ class MakeModuleCommand extends Command
         $replacements = [
             '{{ moduleName }}' => $name,
             '{{ moduleLower }}' => strtolower($name),
-            '{{ moduleLowerPlural' => strtolower($name) . 's',
+            '{{ moduleLowerPlural }}' => strtolower($name) . 's',
         ];
 
         // File dasar
