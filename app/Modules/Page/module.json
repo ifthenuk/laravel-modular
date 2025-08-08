@@ -1,0 +1,6 @@
+{
+  "name": "Page",
+  "route": "page.index",
+  "label": "Page",
+  "icon": "page"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "{{ moduleName }}",
+  "route": "{{ moduleLower }}.index",
+  "label": "{{ label }}",
+  "icon": "{{ icon }}"
+}

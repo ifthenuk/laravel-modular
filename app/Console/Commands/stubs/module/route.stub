@@ -1,0 +1,12 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Modules\{{ moduleName }}\Controllers\{{ moduleName }}Controller;
+
+Route::prefix('{{ moduleLower }}')
+    ->name('{{ moduleLower }}.')
+    ->middleware('auth') //add your middleware here
+    ->group(function(){
+        Route::get('/', [{{ moduleName }}Controller::class, 'index'])->name('index');
+      //add other route here
+});

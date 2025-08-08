@@ -1,0 +1,6 @@
+{
+  "name": "User",
+  "route": "user.index",
+  "label": "Users",
+  "icon": "users"
+}

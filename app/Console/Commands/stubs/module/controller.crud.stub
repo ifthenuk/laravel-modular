@@ -1,0 +1,59 @@
+<?php
+
+namespace App\Modules\{{ moduleName }}\Controllers;
+
+
+
+use Illuminate\Http\Request;
+use App\Modules\{{ moduleName }}\Models\{{ moduleName }};
+use App\Http\Controllers\Controller;
+use App\Modules\{{ moduleName }}\Requests\Store{{ moduleName }}Request;
+use App\Modules\{{ moduleName }}\Requests\Update{{ moduleName }}Request;
+
+class {{ moduleName }}Controller extends Controller
+{
+
+    public function index()
+    {
+        ${{ moduleLowerPlural }} = {{ moduleName }}::all();
+
+        return view('{{ moduleLower }}.index', compact('{{ moduleLowerPlural }}'));
+    }
+
+    public function create()
+    {
+        return view('{{ moduleLower }}.create');
+    }
+
+    public function store(Store{{ moduleName }}Request $request)
+    {
+        {{ moduleName }}::create($request->validated());
+
+        return redirect()->route('{{ moduleLower }}.index')->with('success', '{{ moduleName }} berhasil ditambahkan');
+    }
+
+    public function edit({{ moduleName }} ${{ moduleLower }})
+    {
+        return view('{{ moduleLower }}.edit', compact('{{ moduleLower }}'));
+    }
+
+    public function update(Update{{ moduleName }}Request $request, {{ moduleName }} ${{ moduleLower }})
+    {
+        ${{ moduleLower }}->update($request->validated());
+        return redirect()->route('{{ moduleLower }}.index')->with('success', '{{ moduleName }} berhasil diperbarui');
+    }
+
+    public function destroy({{ moduleName }} ${{ moduleLower }})
+    {
+        ${{ $moduleLower }}->delete();
+
+        return redirect()->route('{{ moduleLower }}.index')->with('success', '{{ moduleName }} berhasil dihapus');
+    }
+    
+    public function restore({{ moduleName }} ${{ moduleLower }})
+    {
+        ${{ moduleLower }} = {{ moduleName }}::onlyTrashed()->findOrFail($id);
+        ${{ moduleLower }}->restore();
+        return redirect()->route('{{ moduleLower }}.index')->with('success', '{{ moduleName }} berhasil dipulihkan');
+    }
+}

@@ -1,0 +1,13 @@
+<?php
+
+namespace App\Modules\{{ moduleName }}\Controllers;
+
+use App\Http\Controllers\Controller;
+
+class {{ moduleName }}Controller extends Controller
+{
+    public function index()
+    {
+        return view('{{ moduleLower }}::index');
+    }
+}
