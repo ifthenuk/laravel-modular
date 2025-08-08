@@ -45,14 +45,13 @@ class {{ moduleName }}Controller extends Controller
 
     public function destroy({{ moduleName }} ${{ moduleLower }})
     {
-        ${{ $moduleLower }}->delete();
+        ${{ moduleLower }}->delete();
 
         return redirect()->route('{{ moduleLower }}.index')->with('success', '{{ moduleName }} berhasil dihapus');
     }
     
     public function restore({{ moduleName }} ${{ moduleLower }})
     {
-        ${{ moduleLower }} = {{ moduleName }}::onlyTrashed()->findOrFail($id);
         ${{ moduleLower }}->restore();
         return redirect()->route('{{ moduleLower }}.index')->with('success', '{{ moduleName }} berhasil dipulihkan');
     }
