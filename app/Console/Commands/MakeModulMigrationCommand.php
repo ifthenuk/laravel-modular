@@ -19,7 +19,7 @@ class MakeModulMigrationCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Membuat file migrasi pada spesifik module';
+    protected $description = 'Create migration file for a specific module';
 
     /**
      * Execute the console command.

@@ -19,7 +19,7 @@ class RemoveModuleCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Menghapus folder module dan subfoldernya';
+    protected $description = 'Remove a module from the application';
 
     /**
      * Execute the console command.

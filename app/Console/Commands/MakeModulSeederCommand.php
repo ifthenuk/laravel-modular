@@ -19,7 +19,7 @@ class MakeModulSeederCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Membuat file seeder pada spesifik module';
+    protected $description = 'Make seeder file for a specific module';
 
     /**
      * Execute the console command.

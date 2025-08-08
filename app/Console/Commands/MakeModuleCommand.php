@@ -20,7 +20,7 @@ class MakeModuleCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Membuat struktur module manual dalam app/Modules';
+    protected $description = 'Create a new module in the app/Modules';
 
     /**
      * Execute the console command.

@@ -18,7 +18,7 @@ class DbSeedModuleCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Menjalankan perintah seed pada folder Modules/*/Database/Seeders';
+    protected $description = 'Run all seeders in folder Modules/[Module_name]/Database/Seeders';
 
     /**
      * Execute the console command.
